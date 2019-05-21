@@ -1,8 +1,8 @@
-(```)
+```
     <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
     </svg>
-(```)
+```
 ### SVG 代码以 <svg> 元素开始，包括开启标签 <svg> 和关闭标签 </svg> 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可     定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间
 
 ### SVG 的 <circle> 用来创建一个圆。cx 和 cy 属性定义圆中心的 x 和 y 坐标。如果忽略这两个属性，那么圆点会被设置为 (0, 0)。r 属性定义圆的半径。stroke       和 stroke-width 属性控制如何显示形状的轮廓。我们把圆的轮廓设置为 2px 宽，黑边框。fill 属性设置形状内的颜色。我们把填充颜色设置为红色
@@ -19,7 +19,7 @@
 ----
 ## 矩形
 ### rx 和 ry 属性可使矩形产生圆角。
-(```)
+```
 <svg width="100%" height="100%" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <rect x="20" y="20" rx="20" ry="20" width="250"
@@ -27,24 +27,24 @@
     stroke-width:5;opacity:0.5"/>
 
 </svg>
-(```)
+```
 
 ## 椭圆
 ### rx 和 ry 属性可使矩形产生圆角。
 ### cx 属性定义圆点的 x 坐标  ,cy 属性定义圆点的 y 坐标
 
-(```)
+```
     <svg width="100%" height="100%" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="300" cy="150" rx="200" ry="80"
         style="fill:rgb(200,100,50);
         stroke:rgb(0,0,100);stroke-width:2"/>
-</svg>
+    </svg>
 
-(```)
+```
 
 ### 两个椭圆  重贴在一起，形成一个环
-(```)
+```
     <svg width="100%" height="100%" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="240" cy="100" rx="220" ry="30"
@@ -52,7 +52,7 @@
         <ellipse cx="220" cy="100" rx="190" ry="20"
         style="fill:white"/>
     </svg>
-(```)
+```
 
 
 ##  直线
@@ -61,36 +61,36 @@
 ### x2 属性在 x 轴定义线条的结束
 ### y2 属性在 y 轴定义线条的结束
 
-(```)
+```
     <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(99,99,99);stroke-width:2"/>
     </svg>
 
-(```)
+```
 
 ## 多边形
 ### points 属性定义多边形每个角的 x 和 y 坐标
-(```)
+```
     <svg width="100%" height="100%" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <polygon points="220,100 300,210 170,250"
         style="fill:#cccccc;
         stroke:#000000;stroke-width:1"/>
     </svg>
-(```)
+```
 
 ## 直线组成的图形
 ### points 属性定义多边形每个角的 x 和 y 坐标
-(```)
+```
     <svg width="100%" height="100%" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
         <polyline points="0,0 0,20 20,20 20,40 40,40 40,60"
         style="fill:white;stroke:red;stroke-width:5"/>
     </svg>
-(```)
+```
 
 ## SVG 编辑器  https://www.cnblogs.com/timxgb/p/5176555.html
-(```)
+```
 <svg width="100%" height="100%" version="1.1"
 xmlns="http://www.w3.org/2000/svg">
     <path d="M153 334
@@ -109,7 +109,7 @@ xmlns="http://www.w3.org/2000/svg">
         style="fill:white;stroke:red;stroke-width:2"/>
 </svg>
 
-(```)
+```
 
 
 ## 高斯模糊（Gaussian Blur
@@ -120,7 +120,7 @@ xmlns="http://www.w3.org/2000/svg">
 ###<feGaussianBlur> 标签的 stdDeviation 属性可定义模糊的程度
 ###in="SourceGraphic" 这个部分定义了由整个图像创建效果
 
-(```)
+```
     <svg width="100%" height="100%" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -133,7 +133,7 @@ xmlns="http://www.w3.org/2000/svg">
         stroke-width:2;filter:url(#Gaussian_Blur)"/>
 </svg>
 
-(```)
+```
 
 ## SVG 渐变 
 ###渐变是一种从一种颜色到另一种颜色的平滑过渡。另外，可以把多个颜色的过渡应用到同一个元素上。
@@ -156,7 +156,7 @@ xmlns="http://www.w3.org/2000/svg">
 
 
 
-(```)
+```
 <svg width="100%" height="100%" version="1.1"
     xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -171,7 +171,7 @@ xmlns="http://www.w3.org/2000/svg">
     style="fill:url(#orange_red)"/>
 </svg>
 
-(```)
+```
 
 
 
@@ -180,7 +180,7 @@ xmlns="http://www.w3.org/2000/svg">
 ### 使用超链接svg 中，最好使用 embed 标签，其他标签可能无法正确显示链接
 
 
-(```)
+```
 <svg width="100%" height="100%" version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -190,6 +190,16 @@ xmlns="http://www.w3.org/2000/svg">
     </a>
 </svg>
 
-(```)
+```
 
 
+
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="20" y="20" width="100" height="100" style="fill:blue">
+    <animate attributeType="CSS" attributeName="opacity" 
+    from="1" to="0" dur="5s" repeatCount="indefinite" />
+    </rect>
+
+</svg>

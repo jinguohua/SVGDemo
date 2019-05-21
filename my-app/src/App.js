@@ -14,6 +14,7 @@ import RadialGradient from './SVG/12.svg';
 import LinkSvg from './SVG/13.svg';
 import CreateSvg from './SVG/14.svg';
 import Animate from './SVG/15.svg';
+import Animate16 from './SVG/16.svg';
 import './App.css';
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
       <header className="App-header">
         <embed src={CreateSvg} alt="logo" />
         <embed src={Animate} alt="logo" />
-        <embed src={RadialGradient} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+        <embed src={Animate16} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <embed src={LinkSvg} alt="logo" style={{ width: '100px' }} />
         <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       </header>
