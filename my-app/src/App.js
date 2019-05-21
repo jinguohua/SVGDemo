@@ -15,6 +15,11 @@ import LinkSvg from './SVG/13.svg';
 import CreateSvg from './SVG/14.svg';
 import Animate from './SVG/15.svg';
 import Animate16 from './SVG/16.svg';
+import Animate17 from './SVG/17.svg';
+import Animate18 from './SVG/18.svg';
+import Animate19 from './SVG/19.svg';
+import Animate20 from './SVG/20.svg';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -31,7 +36,7 @@ function App() {
         <img src={Ecli} alt="logo" />
         <img src={Ecli6} alt="logo" />
         <embed src={Polygon} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-        <img src={Polyline} alt="logo" style={{ width: '100px' }} />
+        <img src={Polyline} alt="logo" />
         <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       </header>
 
@@ -39,16 +44,23 @@ function App() {
         <img src={Filter} alt="logo" />
         <img src={linearGradient} alt="logo" />
         <embed src={RadialGradient} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-        <embed src={LinkSvg} alt="logo" style={{ width: '100px' }} />
+        <embed src={LinkSvg} alt="logo" width="100" height="100" />
         <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       </header>
 
       <header className="App-header">
         <embed src={CreateSvg} alt="logo" />
         <embed src={Animate} alt="logo" />
-        <embed src={Animate16} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-        <embed src={LinkSvg} alt="logo" style={{ width: '100px' }} />
-        <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+        <embed src={Animate16} width="300" height="300" />
+        <embed src={Animate17} alt="logo" />
+      </header>
+      <header className="App-header">
+        <embed src={Animate18} alt="logo" />
+        <embed src={Animate19} alt="logo" />
+      </header>
+      <header className="App-header">
+        <embed src={Animate20} alt="logo" />
+        <embed src={logo} width="300" height="300" />
       </header>
     </div>
   );

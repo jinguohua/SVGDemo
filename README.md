@@ -90,6 +90,21 @@
 ```
 
 ## SVG 编辑器  https://www.cnblogs.com/timxgb/p/5176555.html
+----
+### path 
+#### 对各个属性的解释：https://www.cnblogs.com/guxuelong/p/7743736.html
+
+##### M = moveto
+##### L = lineto
+##### H = horizontal lineto
+##### V = vertical lineto
+##### C = curveto
+##### S = smooth curveto
+##### Q = quadratic Belzier curve
+##### T = smooth quadratic Belzier curveto
+##### A = elliptical Arc
+##### Z = closepath
+
 ```
 <svg width="100%" height="100%" version="1.1"
 xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +207,17 @@ xmlns="http://www.w3.org/2000/svg">
 
 ```
 
+## svg 中使用动画
+####  attributeName="opacity" attributeType="CSS"  from="1" to="0" dur="5s" 
+####  attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0"
+####  attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0"
+####  attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800"
+####  attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300"   ---> <animate />
+####  attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze"    ---> <animateColor />
+####  <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze"/>               --->  <animateMotion />
 
-
+#####  fill的两个属性.freeze：动画结束以后，动画保持最后状态。.remove：动画结束之后，恢复到初始状态。
+```
 <svg width="100%" height="100%" version="1.1"
 xmlns="http://www.w3.org/2000/svg">
 
@@ -203,3 +227,101 @@ xmlns="http://www.w3.org/2000/svg">
     </rect>
 
 </svg>
+```
+
+```
+    <?xml version="1.0" standalone="no"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+    <svg width="100%" height="100%" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+        <rect id="rec" x="0" y="0" width="100" height="100" style="fill:lime"> 
+            <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0"/> 
+            <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0"/> 
+            <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800"/> 
+            <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300"/> 
+            <animateColor attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze"/>
+        </rect>
+    </svg>
+```
+## 沿固定路径动画
+###  <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze"/>
+
+
+```
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(100,100)">
+        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24"> It's SVG!
+            <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze"/>
+        </text>
+    </g>
+</svg>
+
+```
+
+####  <g>元素通常用来对相关图形元素进行分组，以便统一操作，比如旋转，缩放或者添加相关样式等。
+
+
+```
+<svg xmlns="http://www.w3.org/2000/svg"  version="1.1">
+    <g id="group" fill="red" >
+      <rect x="10" y="10" width="100" height="100"/>
+    </g>
+    <use id="one" x="0" y="110" xlink:href="#group"/>
+    <use id="two" x="0" y="220" xlink:href="#group" stroke="black" stroke-width="2"/>
+  </svg>
+  ```
+
+###（1）.<g>元素可以直接显示。
+###（2）.<use>元素可以使用xlink:href属性（属性值是#+g元素id）多次引用<g>元素。
+###（3）.被引用后创建的新元素是最初元素的一个副本；新元素会继承最初元素的样式、旋转、缩放等特性。
+###（4）.不能在新元素中覆盖初始元素的样式（例如描边和填充）。
+###（5）.x和y属性规定新元素的坐标原点。
+
+```
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <rect
+            id="defs"
+            x="90" y="110"
+            width="100" height="100" />
+    </defs>
+  
+    <use id="ant"
+         transform="translate(0 110) rotate(10 0 0)"
+         fill="red"
+         xlink:href="#defs" />
+    <rect id="rect"
+          fill="blue"
+          x="90" y="220"
+          width="110" height="110"
+          transform="rotate(10 0 110)"
+          fill-opacity="0.5" />
+  </svg>
+  ```
+  ###可以认为<defs>是为了定义初始不可见且可重用的元件，而<g>是一个初始可见且本身就是一个元件（当然具有分组功能
+
+  ----
+  ###  
+
+```
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="10" y="20" width="90" height="60">
+        <animateColor id="a1" attributeName="fill" from="red" to="blue" dur="3s"/>
+    </rect>
+    <rect x="10" y="120" width="90" height="60">
+        <animateColor id="a2" attributeName="fill" from="blue" to="yellow" begin="a1.end" dur="3s"/>
+    </rect>
+    <rect x="10" y="220" width="90" height="60">
+        <animateColor id="a3" attributeName="fill" from="yellow" to="green" begin="a2.end" dur="3s"/>
+    </rect>
+
+</svg>
+```
