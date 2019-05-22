@@ -1,0 +1,19 @@
+<svg width='200' height='200' xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 841.9 595.3" > 
+    <path 
+    d="
+    M100 180 
+    C60 150, 50 140, 20 140 
+    C5 136, 11 108, 15 110 
+    C20 98, 90 140, 103 180 
+    "
+    stroke="" fill="#5977df"/>
+    <path 
+    d="
+    M110 180
+    Q 70 105 15 100
+    C-1 90, 20 60 40 60
+    Q 80 80 115 180
+    "
+    stroke="" fill="#1ebbda"/>
+    
+</svg>

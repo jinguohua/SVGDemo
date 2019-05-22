@@ -19,6 +19,7 @@ import Animate17 from './SVG/17.svg';
 import Animate18 from './SVG/18.svg';
 import Animate19 from './SVG/19.svg';
 import Animate20 from './SVG/20.svg';
+import CbkLogo from './SVG/21.svg';
 import logo from './logo.svg';
 import './App.css';
 
@@ -59,7 +60,8 @@ function App() {
       <header className="App-header">
         <embed src={Path} width="500" height="500" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <embed src={Animate20} alt="logo" />
-        <embed src={logo} width="300" height="300" />
+        <embed src={logo} width="200" height="200" />
+        <embed src={CbkLogo} width="200" height="200" />
       </header>
     </div>
   );

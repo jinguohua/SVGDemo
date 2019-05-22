@@ -94,6 +94,8 @@
 ### path 
 #### 对各个属性的解释：https://www.cnblogs.com/guxuelong/p/7743736.html
 
+#### 详细讲解 C 三次方贝塞尔曲线 https://www.cnblogs.com/yjstonestar/p/5003715.html
+
 ##### M = moveto
 ##### L = lineto
 ##### H = horizontal lineto
@@ -187,9 +189,26 @@ xmlns="http://www.w3.org/2000/svg">
 </svg>
 
 ```
+```
+<svg width="100%" height="100%" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
 
+    <defs>
+        <radialGradient id="grey_blue" cx="50%" cy="50%" r="50%"
+        fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:rgb(200,200,200);
+            stop-opacity:0"/>
+            <stop offset="120%" style="stop-color:rgb(0,0,255);
+            stop-opacity:1"/>
+        </radialGradient>
+    </defs>
 
+    <ellipse cx="50" cy="40" rx="50" ry="40"
+    style="fill:url(#grey_blue)"/>
 
+</svg>
+
+```
 ## 在svg 中使用超链接
 
 ### 使用超链接svg 中，最好使用 embed 标签，其他标签可能无法正确显示链接
