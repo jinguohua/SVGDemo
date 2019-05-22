@@ -37,7 +37,6 @@ function App() {
         <img src={Ecli6} alt="logo" />
         <embed src={Polygon} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <img src={Polyline} alt="logo" />
-        <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       </header>
 
       <header className="App-header">
@@ -45,7 +44,6 @@ function App() {
         <img src={linearGradient} alt="logo" />
         <embed src={RadialGradient} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <embed src={LinkSvg} alt="logo" width="100" height="100" />
-        <embed src={Path} width="100" height="100" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       </header>
 
       <header className="App-header">
@@ -59,6 +57,7 @@ function App() {
         <embed src={Animate19} alt="logo" />
       </header>
       <header className="App-header">
+        <embed src={Path} width="500" height="500" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <embed src={Animate20} alt="logo" />
         <embed src={logo} width="300" height="300" />
       </header>
