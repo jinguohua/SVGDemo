@@ -1,0 +1,23 @@
+<svg 
+data-v-3e30b8e5="" viewBox="0 50 200 50" 
+preserveAspectRatio="none" 
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+class="svgline__cell">
+<defs data-v-3e30b8e5="">
+<path data-v-3e30b8e5="" id="gentle-wave" d="
+      M0,70
+      Q 75 50, 150 70
+      T 300 70
+      T 450 70
+      T 600 70">
+      </path>
+      </defs> 
+      <g data-v-3e30b8e5="" class="svgline__parallax">
+      <use data-v-3e30b8e5="" xlink:href="#gentle-wave" x="0" y="0" stroke="stroke: #b5fffc;" stroke-width="2"></use> 
+      <use data-v-3e30b8e5="" xlink:href="#gentle-wave" x="0" y="2" stroke='stroke: #a4e887; '  stroke-width="2" ></use> 
+      <use data-v-3e30b8e5="" xlink:href="#gentle-wave" x="0" y="4" class="svgline__use svgline__use--3"></use>
+       <use data-v-3e30b8e5="" xlink:href="#gentle-wave" x="0" y="6" class="svgline__use svgline__use--4">
+       </use>
+       </g>
+</svg>

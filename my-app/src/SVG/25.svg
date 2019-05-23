@@ -7,15 +7,15 @@ xmlns="http://www.w3.org/2000/svg" >
         C5 136, 11 108, 15 110 
         C20 98, 90 140, 103 180 
         "
-    stroke="" fill="#5977df">
-    <!-- <animate 
+    stroke="" fill="#fff">
+    <animate 
         id="a1" 
         attributeName="fill"
         from="red" 
         to="#5977df"
         dur="3s"
         fill="freeze"
-        /> -->
+        />
     </path>
     <path 
         d="
@@ -24,12 +24,12 @@ xmlns="http://www.w3.org/2000/svg" >
         C-1 90, 20 60 40 65
         Q 80 80 115 180
         "
-    stroke="" fill="#1ebbda">
-    <!-- <animate id="a2" attributeName="fill"
-         from="blue" to="#1ebbda"
+    stroke="" fill="#fff">
+    <animate id="a2" attributeName="fill"
+         from="blue" to="1ebbda"
         dur="3s" begin="a1.end"
         fill="freeze"
-        /> -->
+        />
     </path>
     <path 
         d="
@@ -38,9 +38,9 @@ xmlns="http://www.w3.org/2000/svg" >
         C 30 40  70 10 100 40
         Q 140 100 125 180
         "
-    stroke="" fill="#57d841">
+    stroke="" fill="#fff">
       <animate id="a3" attributeName="fill"
-         from="yellow" to="#57d841"
+         from="yellow" to="57d841"
         dur="3s" begin="a2.end"
         fill="freeze"
         />
@@ -52,12 +52,12 @@ xmlns="http://www.w3.org/2000/svg" >
         C 110 35 130 -10 168 40
         C 180 80 160 150 135 180 
         "
-    stroke="" fill="#f2b81a">
-     <!-- <animate id="a4" attributeName="fill"
-         from="grey" to="#f2b81a"
+    stroke="" fill="#fff">
+     <animate id="a4" attributeName="fill"
+         from="grey" to="f2b81a"
         dur="3s" begin="a3.end"
         fill="freeze"
-        /> -->
+        />
     </path>
     <path 
         d="
@@ -66,12 +66,12 @@ xmlns="http://www.w3.org/2000/svg" >
         Q 200 45 200 110
         C 140 200 160 150 165 140
         "
-    stroke="" fill="#f78c2b">
-     <!-- <animate id="a5" attributeName="fill"
-         from="green" to="#f78c2b"
+    stroke="" fill="#fff">
+     <animate id="a5" attributeName="fill"
+        from="green" to="f78c2b"
         dur="3s" begin="a4.end"
         fill="freeze"
-        /> -->
+        />
     </path>
     
 </svg>

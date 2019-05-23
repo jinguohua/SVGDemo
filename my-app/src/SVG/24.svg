@@ -1,5 +1,7 @@
 <svg width='200' height='200' version="1.1"
 xmlns="http://www.w3.org/2000/svg" > 
+    <g 
+    >
     <path 
         d="
         M100 180 
@@ -7,15 +9,20 @@ xmlns="http://www.w3.org/2000/svg" >
         C5 136, 11 108, 15 110 
         C20 98, 90 140, 103 180 
         "
-    stroke="" fill="#5977df">
-    <!-- <animate 
+    stroke="" 
+    fill="#5977df"
+    >
+    <animate 
         id="a1" 
         attributeName="fill"
         from="red" 
         to="#5977df"
         dur="3s"
         fill="freeze"
-        /> -->
+         begin="12s"
+        repeatCount="indefinite"
+
+        />
     </path>
     <path 
         d="
@@ -25,11 +32,16 @@ xmlns="http://www.w3.org/2000/svg" >
         Q 80 80 115 180
         "
     stroke="" fill="#1ebbda">
-    <!-- <animate id="a2" attributeName="fill"
-         from="blue" to="#1ebbda"
-        dur="3s" begin="a1.end"
+    <animate 
+        id="a2" 
+        attributeName="fill"
+        from="blue" 
+        to="1ebbda"
+        dur="3s" 
         fill="freeze"
-        /> -->
+         begin="12s"
+        repeatCount="indefinite"
+        />
     </path>
     <path 
         d="
@@ -39,10 +51,14 @@ xmlns="http://www.w3.org/2000/svg" >
         Q 140 100 125 180
         "
     stroke="" fill="#57d841">
-      <animate id="a3" attributeName="fill"
-         from="yellow" to="#57d841"
-        dur="3s" begin="a2.end"
+      <animate id="a3" 
+        attributeName="fill"
+        from="yellow" 
+        to="57d841"
+        dur="3s" 
         fill="freeze"
+         begin="12s"
+        repeatCount="indefinite"
         />
     </path>
     <path 
@@ -53,11 +69,16 @@ xmlns="http://www.w3.org/2000/svg" >
         C 180 80 160 150 135 180 
         "
     stroke="" fill="#f2b81a">
-     <!-- <animate id="a4" attributeName="fill"
-         from="grey" to="#f2b81a"
-        dur="3s" begin="a3.end"
+     <animate 
+        id="a4" 
+        attributeName="fill"
+        from="grey" 
+        to="f2b81a"
+        dur="3s" 
+        begin="12s"
         fill="freeze"
-        /> -->
+        repeatCount="indefinite"
+        />
     </path>
     <path 
         d="
@@ -67,11 +88,16 @@ xmlns="http://www.w3.org/2000/svg" >
         C 140 200 160 150 165 140
         "
     stroke="" fill="#f78c2b">
-     <!-- <animate id="a5" attributeName="fill"
-         from="green" to="#f78c2b"
-        dur="3s" begin="a4.end"
+     <animate 
+        id="a5" 
+        attributeName="fill"
+        from="green" 
+        to="f78c2b"
+        dur="3s" 
+        begin="12s"
         fill="freeze"
-        /> -->
+        repeatCount="indefinite"
+        />
     </path>
-    
+    </g>
 </svg>

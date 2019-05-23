@@ -227,13 +227,14 @@ xmlns="http://www.w3.org/2000/svg">
 ```
 
 ## svg 中使用动画
+### attributeType="XML|CSS|auto" 
 ####  attributeName="opacity" attributeType="CSS"  from="1" to="0" dur="5s" 
 ####  attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0"
 ####  attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0"
 ####  attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800"
-####  attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300"   ---> <animate />
-####  attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze"    ---> <animateColor />
-####  <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze"/>               --->  <animateMotion />
+####  attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300"   ---> `<animate />`
+####  attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze"    ---> `<animateColor />`
+####  <animateMotion path="M 0 0 L 100 100" dur="5s" fill="freeze"/>               --->  `<animateMotion />`
 
 #####  fill的两个属性.freeze：动画结束以后，动画保持最后状态。.remove：动画结束之后，恢复到初始状态。
 ```
@@ -247,7 +248,7 @@ xmlns="http://www.w3.org/2000/svg">
 
 </svg>
 ```
-
+###尽管SVG定义了"animateColor"，但是它已经被弃用了，替代它的是"animate"元素。 详细链接：https://blog.csdn.net/seacean2000/article/details/9669655
 ```
     <?xml version="1.0" standalone="no"?>
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
@@ -283,7 +284,7 @@ xmlns="http://www.w3.org/2000/svg">
 
 ```
 
-####  <g>元素通常用来对相关图形元素进行分组，以便统一操作，比如旋转，缩放或者添加相关样式等。
+####  `<g>`元素通常用来对相关图形元素进行分组，以便统一操作，比如旋转，缩放或者添加相关样式等。
 
 
 ```
@@ -296,8 +297,8 @@ xmlns="http://www.w3.org/2000/svg">
   </svg>
   ```
 
-###（1）.<g>元素可以直接显示。
-###（2）.<use>元素可以使用xlink:href属性（属性值是#+g元素id）多次引用<g>元素。
+###（1）.`<g>`元素可以直接显示。
+###（2）.`<use>`元素可以使用xlink:href属性（属性值是#+g元素id）多次引用`<g>`元素。
 ###（3）.被引用后创建的新元素是最初元素的一个副本；新元素会继承最初元素的样式、旋转、缩放等特性。
 ###（4）.不能在新元素中覆盖初始元素的样式（例如描边和填充）。
 ###（5）.x和y属性规定新元素的坐标原点。
@@ -323,7 +324,7 @@ xmlns="http://www.w3.org/2000/svg">
           fill-opacity="0.5" />
   </svg>
   ```
-  ###可以认为<defs>是为了定义初始不可见且可重用的元件，而<g>是一个初始可见且本身就是一个元件（当然具有分组功能
+  ###  可以认为<defs>是为了定义初始不可见且可重用的元件，而<g>是一个初始可见且本身就是一个元件（当然具有分组功能
 
   ----
   ###  

@@ -19,7 +19,12 @@ import Animate17 from './SVG/17.svg';
 import Animate18 from './SVG/18.svg';
 import Animate19 from './SVG/19.svg';
 import Animate20 from './SVG/20.svg';
+import Animate23 from './SVG/23.svg';
+import AnimateColor from './SVG/22.svg';
 import CbkLogo from './SVG/21.svg';
+import CbkLogo1 from './SVG/24.svg';
+import CbkLogo2 from './SVG/25.svg';
+import Animate26 from './SVG/26.svg';
 import logo from './logo.svg';
 import './App.css';
 
@@ -53,15 +58,25 @@ function App() {
         <embed src={Animate16} width="300" height="300" />
         <embed src={Animate17} alt="logo" />
       </header>
-      <header className="App-header">
+      <header className="App-header" style={{ height: 300 }}>
         <embed src={Animate18} alt="logo" />
         <embed src={Animate19} alt="logo" />
+        <embed src={AnimateColor} alt="logo" height='300' />
       </header>
       <header className="App-header">
-        <embed src={Path} width="500" height="500" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+        <embed src={Path} width="300" height="400" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         <embed src={Animate20} alt="logo" />
         <embed src={logo} width="200" height="200" />
+        <embed src={Animate23} alt="logo" />
+      </header>
+      <header className="App-header">
         <embed src={CbkLogo} width="200" height="200" />
+        <embed src={CbkLogo1} width="200" height="200" />
+        <embed src={CbkLogo2} width="200" height="200" />
+      </header>
+      <header className="App-header">
+        <embed src={Animate26} width="100%" height="100%" />
+
       </header>
     </div>
   );
