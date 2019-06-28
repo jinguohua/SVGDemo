@@ -1,0 +1,95 @@
+<svg 
+    class="load" 
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="-15 -15 100 100"
+    id='svg'
+>
+<style  type="text/css">
+ 
+ @keyframes dash1 {
+    0% {
+      stroke-dasharray: 1, 200;
+      <!-- stroke-dashoffset: 0; -->
+    }
+    <!-- 25% {
+      stroke-dasharray: 40, 200;
+      stroke-dashoffset: -40;
+    }  -->
+    50% {
+      stroke-dasharray: 100,100;
+      stroke-dashoffset: -50;
+    }
+    <!-- 75% {
+      stroke-dasharray: 120,50;
+      stroke-dashoffset: -120;
+    } -->
+    100% {
+      stroke-dasharray: 150,0;
+      stroke-dashoffset: -140;
+    }
+}
+.preload {
+    stroke: rgb(53, 157, 218);
+    stroke-width: 5;
+    fill: none;
+    animation: dash1 5s linear infinite;
+ }
+
+  @keyframes dash2 {
+    0% {
+      stroke-dasharray: 1, 200;
+    }
+  
+    50% {
+      stroke-dasharray: 100,100;
+    }
+ 
+    100% {
+      stroke-dasharray: 150,0;
+    }
+}
+.nextload {
+    stroke: rgb(53, 157, 218);
+    stroke-width: 5;
+    fill: none;
+    animation: dash2 2s linear 1;
+ }
+ @keyframes dash3 {
+    0% {
+      stroke-dasharray: 1, 200;
+    }
+  
+    50% {
+      stroke-dasharray: 20,100;
+    }
+ 
+    100% {
+      stroke-dasharray: 30,0;
+    }
+}
+ .checked {
+ animation: dash3 2s linear 1;
+ }
+</style>
+
+<script>
+  setTimeout(function(){
+    var cir=document.getElementById('load');
+    var path=document.getElementById('checked')
+    cir.classList.remove("preload");
+    cir.classList.add("nextload");
+    path.classList.add("checked");
+    
+
+  },10000)
+
+</script>
+    <circle id="load" class='preload'  cx="50" cy="50" r="20" fill="none" />
+    <path id='checked' class='' d='M40,48 L48,55 L60,40'  
+    stroke='rgb(53, 157, 218)'
+    stroke-width='2'
+    fill= 'none' />
+      <text x='10'>正在加载</text>
+      <text x='20' y='20'>加载结束</text>
+</svg>

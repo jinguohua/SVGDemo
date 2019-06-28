@@ -1,0 +1,51 @@
+<svg 
+    id='svg'
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill='grey'
+    >
+    <script>
+        const svg= document.getElementById('svg');
+        const width='400',height='400',vWidth=-0.5*width+0.5,vheight=-0.5*height+.5,
+        arg=10,viewBox = [vWidth ,vheight, width ,height];
+        let pathCir = ['M'+0.2*width,0];
+        svg.setAttribute('viewBox',viewBox);
+        svg.setAttribute('width',width);
+        svg.setAttribute('height',height);
+        svg.addEventListener('load',()=>{
+            document.getElementById('drewCircle').setAttribute('d',pathCir);
+        })
+        var lastTime = new Date();
+        function update (){
+            var newTime = new Date() ;
+            var time = newTime-lastTime;
+            <!-- lastTime = newTime; -->
+            x = Math.sin(2*Math.PI / 360*arg) * 0.2*height;
+            y = Math.cos(2*Math.PI / 360*arg) * 0.2*height;
+            pathCir.push('A'+0.2*width,0.2*height,0.2,1,1,x,y) 
+            window.requestAnimationFrame(update);
+        }
+        setInterval(update(),300)
+    </script>
+        fill="none" stroke="blue" stroke-width="2" >
+        <text id="TextElement" x="-200" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">0
+        </text>
+        <text id="TextElement" x="150" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+        <text id="TextElement" y="-180" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+        <text id="TextElement" y="190" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+        <line x1="-200" y1="0" x2="400" y2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+        <line y1="-200" x1="0" y2="400" x2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+        <g id='circle'>
+        <path id='drewCircle' 
+            stroke="blue" 
+            stroke-width="2"
+            fill="#fff"
+        >
+        </path>
+    </g>
+</svg>

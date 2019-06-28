@@ -1,0 +1,94 @@
+<svg width='210' height='200' version="1.1"
+xmlns="http://www.w3.org/2000/svg" id='loading' 
+> 
+    
+    <path 
+        d="
+        M100 180 
+        C60 150, 50 140, 20 140 
+        C5 136, 11 108, 15 110 
+        C20 98, 90 140, 103 180 
+        "
+    stroke="" 
+    fill="#5977df"
+    >
+    <animate 
+        id="a1" 
+        attributeName="fill"
+        from="5944d0" 
+        to="#5977df"
+        dur="0.2s"
+        fill="freeze"
+        begin='0;a5.end'
+        />
+    </path>
+    <path 
+        d="
+        M110 180
+        Q 70 105 15 100
+        C-1 90, 20 60 40 65
+        Q 80 80 115 180
+        "
+    stroke="" fill="#1ebbda">
+    <animate id="a2" 
+        attributeName="fill"
+        from="1e99da" 
+        to="1ebbda"
+        dur="0.2s" 
+        begin="a1.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M120 180
+        Q 100 85 55 60
+        C 50 48 70 13 105 40
+        Q 140 100 125 180
+        "
+    stroke="" fill="#57d841">
+      <animate 
+        id="a3" 
+        attributeName="fill"
+        from="57aa41" 
+        to="57d841"
+        dur="0.2s" 
+        begin="a1.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M130 180
+        Q 150 85 115 40
+        C 110 40 140 0 168 55
+        C 180 80 160 150 135 180 
+        "
+    stroke="" fill="#f2b81a">
+     <animate id="a4" 
+        attributeName="fill"
+        from="f2aa1a" 
+        to="f2b81a"
+        dur="0.2s" 
+        begin="a2.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M165 140
+        C 180 120 180 90 180 70
+        C 189 75 205 85 196 120
+        Q 165 140 165 140
+        "
+    stroke="" fill="#f78c2b">
+     <animate id="a5" 
+        attributeName="fill"
+        from="f7cc2b" 
+        to="f78c2b"
+        dur="0.2s" 
+        begin="a4.end"
+        fill="freeze"
+        />
+    </path>
+</svg>
