@@ -22,15 +22,24 @@ import Animate20 from './SVG/20.svg';
 import Animate23 from './SVG/23.svg';
 import AnimateColor from './SVG/22.svg';
 import CbkLogo from './SVG/21.svg';
-import CbkLogo1 from './SVG/24.svg';
+// import CbkLogo1 from './SVG/24.svg';
 import CbkLogo2 from './SVG/25.svg';
-import Animate26 from './SVG/26.svg';
+import CbkLogo4 from './SVG/31.svg';
+// import Animate26 from './SVG/26.svg';
+// import CbkLogo3 from './SVG/27.svg';
+import Loading28 from './SVG/28.svg';
+import Loading from './SVG/29.svg';
+import Loading30 from './SVG/30.svg';
+import Loading32 from './SVG/32.svg';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <header className="App-header" style={{ height: 400 }}>
+        <embed src={Loading28} />
+      </header>
       <header className="App-header">
         <img src={Cir} alt="logo" />
         <img src={Rect} alt="logo" style={{ float: "left" }} />
@@ -69,13 +78,19 @@ function App() {
         <embed src={logo} width="200" height="200" />
         <embed src={Animate23} alt="logo" />
       </header>
-      <header className="App-header">
+      <header>
         <embed src={CbkLogo} width="200" height="200" />
-        <embed src={CbkLogo1} width="200" height="200" />
-        <embed src={CbkLogo2} width="200" height="200" />
+        {/* <embed src={CbkLogo1} width="200" height="200" /> */}
+        <embed src={CbkLogo2} width="210" height="200" />
+        <embed src={CbkLogo4} width="210" height="200" />
+        {/* <embed src={CbkLogo3} width="200" height="200" /> */}
+
+        <embed src={Loading} style={{ width: '200px', height: '200px' }} />
+        <embed src={Loading30} />
+        <embed src={Loading32} />
       </header>
-      <header className="App-header">
-        <embed src={Animate26} width="100%" height="100%" />
+
+      <header className="App-header" style={{ height: 200 }}>
 
       </header>
     </div>

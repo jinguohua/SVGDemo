@@ -1,5 +1,6 @@
-<svg width='200' height='200' version="1.1"
+<svg id='loading' width='100%' height='100%' version="1.1"
 xmlns="http://www.w3.org/2000/svg" > 
+
     <g 
     >
     <path 
@@ -17,11 +18,9 @@ xmlns="http://www.w3.org/2000/svg" >
         attributeName="fill"
         from="red" 
         to="#5977df"
-        dur="3s"
+        begin='0;a5.end'
+        dur="2s" 
         fill="freeze"
-         begin="12s"
-        repeatCount="indefinite"
-
         />
     </path>
     <path 
@@ -37,10 +36,9 @@ xmlns="http://www.w3.org/2000/svg" >
         attributeName="fill"
         from="blue" 
         to="1ebbda"
-        dur="3s" 
+        dur="2s"  
         fill="freeze"
-         begin="12s"
-        repeatCount="indefinite"
+         begin="a1.end"
         />
     </path>
     <path 
@@ -55,10 +53,9 @@ xmlns="http://www.w3.org/2000/svg" >
         attributeName="fill"
         from="yellow" 
         to="57d841"
-        dur="3s" 
+        dur="2s"  
         fill="freeze"
-         begin="12s"
-        repeatCount="indefinite"
+         begin="a2.end"
         />
     </path>
     <path 
@@ -74,10 +71,9 @@ xmlns="http://www.w3.org/2000/svg" >
         attributeName="fill"
         from="grey" 
         to="f2b81a"
-        dur="3s" 
-        begin="12s"
+        dur="2s"  
+        begin="a3.end"
         fill="freeze"
-        repeatCount="indefinite"
         />
     </path>
     <path 
@@ -93,10 +89,9 @@ xmlns="http://www.w3.org/2000/svg" >
         attributeName="fill"
         from="green" 
         to="f78c2b"
-        dur="3s" 
-        begin="12s"
+        dur="2s"  
+        begin="a4.end"
         fill="freeze"
-        repeatCount="indefinite"
         />
     </path>
     </g>

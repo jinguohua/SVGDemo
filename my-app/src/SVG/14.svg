@@ -11,7 +11,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink"
         console.log(SVGDoc,'SVGDoc')
         
         var txt=SVGDoc.getElementById("txt");
-        var link=SVGDoc.createElement("a");
+        var link=SVGDoc.createElementNS("http://www.w3.org/1999/xhtml","a");
         var text_node=SVGDoc.createTextNode("LINK");
         link.setAttributeNS(
         "http://www.w3.org/1999/xlink",

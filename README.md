@@ -1,3 +1,112 @@
+### 重要知识点  viewbox ,preserveAspectRatio,getSvgDocument ,
+
+####viewBox='-200.5,-200.5,400,400'
+```
+<svg 
+    id='svg'
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill='grey'
+    >
+    <script>
+        const svg= document.getElementById('svg');
+        const width='400',height='400',vWidth=-0.5*width+0.5,vheight=-0.5*height+.5,
+        arg=10,viewBox = [vWidth ,vheight, width ,height];
+        let pathCir = ['M'+0.2*width,0];
+        svg.setAttribute('viewBox',viewBox);
+        svg.setAttribute('width',width);
+        svg.setAttribute('height',height);
+        svg.addEventListener('load',()=>{
+            document.getElementById('drewCircle').setAttribute('d',pathCir);
+        })
+        var lastTime = new Date();
+        function update (){
+            var newTime = new Date() ;
+            var time = newTime-lastTime;
+            <!-- lastTime = newTime; -->
+            x = Math.sin(2*Math.PI / 360*arg) * 0.2*height;
+            y = Math.cos(2*Math.PI / 360*arg) * 0.2*height;
+            pathCir.push('A'+0.2*width,0.2*height,0.2,1,1,x,y) 
+            window.requestAnimationFrame(update);
+        }
+        setInterval(update(),300)
+    </script>
+        fill="none" stroke="blue" stroke-width="2" >
+        <text id="TextElement" x="-200" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">0
+        </text>
+        <text id="TextElement" x="150" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+        <text id="TextElement" y="-180" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+        <text id="TextElement" y="190" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+        <line x1="-200" y1="0" x2="400" y2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+        <line y1="-200" x1="0" y2="400" x2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+        <g id='circle'>
+        <path id='drewCircle' 
+            stroke="blue" 
+            stroke-width="2"
+            fill="#fff"
+        >
+        </path>
+    </g>
+</svg>
+```
+
+### css: 
+
+
+####详解 viewbox
+```
+<svg 
+    id='svg'
+    width="200" 
+    height="200" 
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill='grey'
+    >
+    <script>
+        const svg= document.getElementById('svg');
+        const width='400',height='400',vWidth=-0.5*width+0.5,vheight=-0.5*height+.5,
+        viewBox = [vWidth ,vheight, width ,height]
+        svg.setAttribute('viewBox',viewBox);
+        svg.setAttribute('width',width);
+         svg.setAttribute('height',height);
+        svg.addEventListener('load',()=>{
+        
+        })
+    </script>
+        fill="none" stroke="blue" stroke-width="2" >
+        <text id="TextElement" x="-200" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+        <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">0
+        </text>
+        <text id="TextElement" x="150" y="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+
+        <text id="TextElement" y="-180" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">-200
+        </text>
+      
+        <text id="TextElement" y="190" x="0" style="font-family:Verdana;font-size:24;color:#f7eeee">200
+        </text>
+
+
+        <line x1="-200" y1="0" x2="400" y2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+        <line y1="-200" x1="0" y2="400" x2="0" style="stroke:rgb(99,99,99);stroke-width:1"/>
+       
+        <g id='circle'>
+        <path id='drewCircle'>
+        </path>
+   
+    </g>
+   
+</svg>
+
+```
+
 ```
     <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
@@ -345,3 +454,113 @@ xmlns="http://www.w3.org/2000/svg">
 
 </svg>
 ```
+
+## 参考文档 
+## SVG 动态添加元素与事件
+##### https://www.cnblogs.com/lovellll/p/10208207.html
+##### https://www.cnblogs.com/siyunianhua/p/3340589.html
+##### https://www.zhangxinxu.com/wordpress/?p=4333
+
+
+##### 动态脚本svg变化 https://www.cnblogs.com/nzbin/p/7811451.html
+
+
+##动态彩贝壳loading
+```
+<svg width='210' height='200' version="1.1"
+xmlns="http://www.w3.org/2000/svg" id='loading' 
+> 
+    <script>
+    </script>
+    <path 
+        d="
+        M100 180 
+        C60 150, 50 140, 20 140 
+        C5 136, 11 108, 15 110 
+        C20 98, 90 140, 103 180 
+        "
+    stroke="" 
+    fill="#5977df"
+    >
+    <animate 
+        id="a1" 
+        attributeName="fill"
+        from="5944d0" 
+        to="#5977df"
+        dur="0.2s"
+        fill="freeze"
+        begin='0;a5.end'
+        />
+    </path>
+    <path 
+        d="
+        M110 180
+        Q 70 105 15 100
+        C-1 90, 20 60 40 65
+        Q 80 80 115 180
+        "
+    stroke="" fill="#1ebbda">
+    <animate id="a2" 
+        attributeName="fill"
+        from="1e99da" 
+        to="1ebbda"
+        dur="0.2s" 
+        begin="a1.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M120 180
+        Q 100 85 55 60
+        C 50 48 70 13 105 40
+        Q 140 100 125 180
+        "
+    stroke="" fill="#57d841">
+      <animate 
+        id="a3" 
+        attributeName="fill"
+        from="57aa41" 
+        to="57d841"
+        dur="0.2s" 
+        begin="a1.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M130 180
+        Q 150 85 115 40
+        C 110 40 140 0 168 55
+        C 180 80 160 150 135 180 
+        "
+    stroke="" fill="#f2b81a">
+     <animate id="a4" 
+        attributeName="fill"
+        from="f2aa1a" 
+        to="f2b81a"
+        dur="0.2s" 
+        begin="a2.end"
+        fill="freeze"
+        />
+    </path>
+    <path 
+        d="
+        M165 140
+        C 180 120 180 90 180 70
+        C 190 70 210 85 196 120
+        Q 165 140 165 140
+        "
+    stroke="" fill="#f78c2b">
+     <animate id="a5" 
+        attributeName="fill"
+        from="f7cc2b" 
+        to="f78c2b"
+        dur="0.2s" 
+        begin="a4.end"
+        fill="freeze"
+        />
+    </path>
+</svg>
+```
+
